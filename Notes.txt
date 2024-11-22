@@ -1,0 +1,55 @@
+DOM - Nothing but browser
+vanilla JS - plain language used for small  project
+ECMA - European Computer Manufacturers Association
+Console.group() - combine multiple lines into single
+Linting - Highlighting
+CDN - Content Delivery Network (For example: html file in one browser, css in another browser like this for js, etc...)
+
+If you want to use another function in js file which is also in another js file then we have to mention that js in html tag <script type="module" src="script.js"/>
+
+
+var - It is a container to store values
+
+Hoisting:(only for var not for let,const)
+fruit="mango";
+console.log(fruit);
+var fruit;
+In this we declare and then initialize
+
+Block Scope:
+within ()
+
+undefined:
+var a;
+null:
+var s=null; // for create empty object because we use later
+
+Function - if function will be in global scope which takes input and may or may not produce output after some time
+Method - if a function is inside the object then it is known as method
+
+if you know we will get some property like pocketnum,color then use wallet.color (dot property)
+if you dont know that means user enter the property at run time then wallet['color'] (Square property) used
+
+push for add to last
+unshift for add to first
+pop remove last
+shift remove first
+
+
+For object :
+wallet{color:"green"}
+for(let property in wallet){}
+
+For Array:
+wallets=['green','pride']
+for(let wallet of wallets){}
+
+
+Function Expression:
+const getDetails=function(){
+}
+
+Normal function:
+function name(property){
+}
+
