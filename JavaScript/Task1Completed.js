@@ -55,23 +55,20 @@ function calculateDiscount(customerChosenBooks) {
             switch (book.price) {
                 case book.price > 100 && book.price < 200:
                     book.discount = book.price * 2 / 100;
-
-
                     break;
+
                 case book.price >= 200 && book.price < 500:
                     book.discount = book.price * 5 / 100;
-
-
                     break;
+
                 case book.price >= 500 && book.price < 750:
                     book.discount = book.price * 10 / 100;
-
-
                     break;
+
                 case book.price >= 750:
                     book.discount = book.price * 15 / 100;
-
                     break;
+                    
                 default:
                     book.discount = 0;
                     break;
@@ -82,17 +79,19 @@ function calculateDiscount(customerChosenBooks) {
     calculateFinalSummary(customerChosenBooks);
 
 }
-function calculateFinalSummary(customerChosenBooks){
-    let totalDiscount=0;
-    let totalPrice=0;
+function calculateFinalSummary(customerChosenBooks) {
+    let totalDiscount = 0;
+    let totalPrice = 0;
     for (let book of customerChosenBooks) {
-        book.finalPrice=book.price-book.discount;
-        totalDiscount=totalDiscount+book.discount;
-        totalPrice+=book.finalPrice;
+        book.finalPrice = book.price - book.discount;
+        totalDiscount = totalDiscount + book.discount;
+        totalPrice += book.finalPrice;
     }
+    console.log();
+    console.log("Final Summary:");
     console.log(customerChosenBooks);
-    console.log("TotalDiscount:",totalDiscount);
-    console.log("TotalPrice:",totalPrice);
+    console.log("TotalDiscount:", totalDiscount);
+    console.log("TotalPrice:", totalPrice);
 }
 
 function generateBill() {
