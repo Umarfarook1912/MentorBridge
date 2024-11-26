@@ -41,7 +41,7 @@ function calculateDiscount(customerChosenBooks) {
     // if(currentCustomer){
     //     isExisting=true;
     // }
-    const isExistingCustomer = currentCustomer ? isExisting = true : isExisting = false;
+    const isExistingCustomer = currentCustomer ? true : false;
 
     for (let book of customerChosenBooks) {
         if (isExistingCustomer) {
@@ -76,10 +76,10 @@ function calculateDiscount(customerChosenBooks) {
         }
     }
     console.log(customerChosenBooks);
-    calculateFinalSummary(customerChosenBooks);
+    calculateFinalSummary(customerChosenBooks,currentCustomer);
 
 }
-function calculateFinalSummary(customerChosenBooks) {
+function calculateFinalSummary(customerChosenBooks,currentCustomer) {
     let totalDiscount = 0;
     let totalPrice = 0;
     for (let book of customerChosenBooks) {
@@ -89,6 +89,7 @@ function calculateFinalSummary(customerChosenBooks) {
     }
     console.log();
     console.log("Final Summary:");
+    console.log("Customer Name:",currentCustomer.name)
     console.log(customerChosenBooks);
     console.log("TotalDiscount:", totalDiscount);
     console.log("TotalPrice:", totalPrice);
