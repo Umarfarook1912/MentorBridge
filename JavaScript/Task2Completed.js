@@ -7,12 +7,12 @@ const employeeList = [
 const chosenDepartment = "HR";
 
 function removeDuplicates() {
-    const uniqueExployeeSet = new Set();
+    const uniqueEmployeeSet = new Set();
     const uniqueEmployeeList = [];
-    for (const exployee of employeeList) {
-        if (!uniqueExployeeSet.has(exployee.id)) {
-            uniqueExployeeSet.add(exployee.id);
-            uniqueEmployeeList.push(exployee);
+    for (const employee of employeeList) {
+        if (!uniqueEmployeeSet.has(employee.id)) {
+            uniqueEmployeeSet.add(employee.id);
+            uniqueEmployeeList.push(employee);
         }
     }
     return uniqueEmployeeList;
@@ -23,7 +23,7 @@ function filterEmployee(uniqueEmployeeList) {
 }
 
 function calculateCompensation(uniqueEmployeeList) {
-    for (let employee of uniqueEmployeeList) {
+    for (const employee of uniqueEmployeeList) {
         if (employee.department == "HR" && employee.salary < 50000) {
             employee.bonusPercentage += 10;
         }
@@ -51,7 +51,7 @@ function calculateCompensation(uniqueEmployeeList) {
 function calculateGroupByDepartment(compensationList) {
     const compensationDepartmentList = {};
     for (const employee of compensationList) {
-        if (!compensationDepartmentList[employee.departcsement]) {
+        if (!compensationDepartmentList[employee.department]) {
             compensationDepartmentList[employee.department]=[];
         }
         compensationDepartmentList[employee.department].push({id:employee.id,name:employee.name,salary:employee.salary,bonus:employee.bonus,totalCompensation:employee.totalCompensation});
