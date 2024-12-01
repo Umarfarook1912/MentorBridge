@@ -39,6 +39,7 @@ function calculateCompensation(uniqueEmployeeList) {
             }
             else if (employee.salary >= 500000) {
                 employee.bonusPercentage += 20;
+                
             }
         }
         employee.bonus = employee.salary * (employee.bonusPercentage / 100);
