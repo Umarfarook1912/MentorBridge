@@ -1,5 +1,10 @@
 import { Card } from "react-bootstrap"
 export const PortfolioSummary = (props) => {
+
+const fetchApi = async () => {
+    await fetch('')
+}
+
     return (
         <div className="d-flex justify-content-center mt-5 mb-5">
             <Card style={{ width: "20rem" }}>

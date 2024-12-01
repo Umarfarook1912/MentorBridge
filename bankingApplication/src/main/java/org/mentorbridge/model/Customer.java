@@ -1,4 +1,4 @@
-package org.example;
+package org.mentorbridge.model;
 
 public class Customer { // Model class
 
@@ -10,18 +10,15 @@ public class Customer { // Model class
     String address;
     String phoneNumber;
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", age=" + age +
-                ", accountNumber=" + accountNumber +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+    public double getAmount() {
+        return amount;
     }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    double amount;
 
 
 //    Customer(String firstName, String lastName, String email, int age, long accountNumber, String address, String phoneNumber)
@@ -91,5 +88,17 @@ public class Customer { // Model class
         this.phoneNumber = phoneNumber;
     }
 
-
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                ", accountNumber=" + accountNumber +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", amount=" + amount +
+                '}';
+    }
 }
