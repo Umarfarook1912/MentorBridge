@@ -11,9 +11,9 @@ const fetchApi = async () => {
                 <Card.Header>Summary</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <h6> Total PortFolio Value:{props.summary.totalPortFolioValue}</h6>
-                        <h6>Total Stock Owner: {props.summary.totalStocksOwned}</h6>
-                        <h6>User Cash Balance: {props.summary.userCashBalance}</h6>
+                        <h6> Total PortFolio Value:<strong>{props.summary.totalPortFolioValue}</strong></h6>
+                        <h6>Total Stock Owned: <strong>{props.summary.totalStocksOwned}</strong></h6>
+                        <h6>User Cash Balance: <strong>{props.summary.userCashBalance}</strong></h6>
                     </Card.Text>
                 </Card.Body>
             </Card>
