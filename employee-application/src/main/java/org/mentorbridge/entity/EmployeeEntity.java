@@ -1,19 +1,18 @@
 package org.mentorbridge.entity;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "EMPLOYEE")
+@Document(value = "employee")
 @Builder
 @AllArgsConstructor
 @Data
 public class EmployeeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     String firstName;
     String lastName;
